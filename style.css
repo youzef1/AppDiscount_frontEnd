@@ -1,0 +1,180 @@
+* {
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+	background-color: #607a86;
+}
+/* body::before,
+body::after{
+	top: 0;
+	position: absolute;
+	color: white;
+	width: 45%;
+	background-color: rgba(0, 0, 0, 0.308);
+	padding: 6px;
+	font-size: 14px;
+	border-radius: 5px;
+	margin: 5px;
+}
+body::before {
+	direction: rtl;
+	content: "موقع لتطبيق بعض المفاهيم من Js , وصلت الي الفيديو رقم 47 لدورة Osama Mohmed";
+	right: 0;
+	text-align: right;
+}
+body::after {
+	content: "A site to apply some concepts from Js, I got to the 47th video of the Osama Mohamed course";
+	left: 0;
+	top: 20px;
+	text-align: left;
+} */
+::selection {
+	background-color: #607a86;
+	color: white;
+}
+.home {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row-reverse;
+	margin: 120px auto 0;
+}
+
+.coupon-card {
+	color: rgb(0, 0, 0);
+	background-color: white;
+	padding: 20px;
+	width: 600px;
+	margin: 50px auto;
+	border-radius: 10px;
+	text-align: center;
+}
+.coupon-card .c-p {
+	color: white;
+	border-radius: 10px;
+	text-align: center;
+	padding: 20px;
+	background-color: #607a86;
+	position: relative;
+	overflow: hidden;
+}
+.coupon-card .c-p::before {
+	content: "Valid_Coupon_Now";
+	font-size: 11px;
+	padding: 3px;
+	background-color: #03a9f4;
+	bottom: 0;
+	left: 0;
+	position: absolute;
+	cursor: pointer;
+}
+.coupon-card .c-p #coupon {
+	background: #00000045;
+	color: black;
+	border-radius: 10px;
+	padding: 10px;
+	text-align: left;
+	margin-bottom: 20px;
+}
+.coupon-card .c-p #coupon .coupon {
+	display: block;
+	padding: 10px;
+	border-radius: 10px;
+	color: white;
+	border: 2px solid rgb(255 255 255 / 27%);
+	position: relative;
+	z-index: 2;
+	overflow: hidden;
+	margin-bottom: 10px;
+}
+.coupon-card .c-p #coupon .coupon::before {
+	content: "";
+	background-color: #607a86;
+	width: 0%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+	z-index: -1;
+	transition: width 0.9s;
+}
+.coupon-card .c-p #coupon .coupon::after {
+	content: "Copy Coupon";
+	background-color: #607a86;
+	width: 80px;
+	height: 30px;
+	bottom: 18%;
+	right: 2px;
+	border-radius: 10px;
+	display: flex;
+	font-size: 12px;
+	position: absolute;
+	z-index: -1;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	transition: opacity 0.4s;
+	box-shadow: 0px 0px 5px black;
+	cursor: pointer;
+}
+.coupon-card .c-p #coupon .coupon:hover::before {
+	width: 100%;
+	transition: width 0.9s;
+}
+.coupon-card .c-p #coupon .coupon:hover::after {
+	opacity: 1;
+	transition: opacity 0.4s 0.3s;
+}
+
+.coupon-test {
+	background: white;
+	padding: 20px;
+	text-align: center;
+	width: 600px;
+	margin: auto;
+	border-radius: 10px;
+	text-align: center;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-bottom: 30px;
+}
+#myText {
+	outline: 0;
+	border: 2px solid #607a86;
+	border-radius: 15px;
+	padding: 8px;
+	font-size: 15px;
+	margin: 15px 0;
+	transition: 0.4s;
+	text-transform: capitalize;
+}
+#myText:focus::placeholder {
+	opacity: 0;
+	transition: 0.4s;
+}
+
+#myButton {
+	background: #607a86;
+	outline: 0;
+	border: 0;
+	padding: 10px;
+	font-size: 16px;
+	color: white;
+	border-radius: 5px;
+	transition: 0.4s;
+	cursor: pointer;
+}
+
+#myButton:hover {
+	background: #607a86d0;
+	transition: 0.4s;
+}
+
+span.state {
+	color: #607a86;
+	font-size: 25px;
+}
